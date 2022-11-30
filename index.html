@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <title>Aeronaves</title>
+</head>
+
+<body class="backgorund-img">
+    <h1 class="px-5 pt-5 text-center">Aeronaves</h1>
+    <div class="row px-5 m-0">
+        <div class="container mt-5 col border rounded p-3 mx-2">
+            <div class="text-center">
+                <span class="fw-bold fs-4">Cadastro de Aeronaves</span>
+            </div>
+            <div class="row my-3">
+                <div class="col-12">
+                    <label for="inputCompany"><b>Companhia Aérea:</b></label>
+                    <input type="text" class="form-control" id="inputCompany" placeholder="Insira o nome da companhia">
+                </div>
+                <div class="col-6">
+                    <label for="inputCapacity"><b>Capacidade: (Numérico)</b></label>
+                    <input type="number" class="form-control" id="inputCapacity"
+                        placeholder="Insira capacidade da aeronave">
+                </div>
+                <div class="col-6">
+                    <label for="inputRab"><b>Ins. Aeronave (RAB): (XX-XXX)</b></label>
+                    <input type="text" class="form-control" id="inputRab"
+                        placeholder="Insira a inscrição da aeronave (RAB)" maxlength="6" minlength="6">
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col">
+                    <label for="selectTypeAircraft"><b>Tipo:</b></label>
+                    <select class="form-select" id="selectTypeAircraft">
+                        <option value="" selected>Selecione o tipo</option>
+                        <option value="Carga">Carga</option>
+                        <option value="Comercial">Comercial</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="selectCategoryAircraft"><b>Categoria:</b></label>
+                    <select class="form-select" id="selectCategoryAircraft">
+                        <option value="" selected>Selecione a categoria</option>
+                        <option value="Internacional">Internacional</option>
+                        <option value="Nacional">Nacional</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d-grid mt-3">
+                <button id="btnCadastro" class="btn btn-primary fs-4" type="submit">Cadastrar</button>
+            </div>
+        </div>
+        <div class="container mt-5 col border rounded p-3 mx-2">
+            <div class="text-center">
+                <span class="fw-bold fs-4">Lista de Aeronaves</span>
+            </div>
+            <table class="table table-striped text-center align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col">Insc. Aeronave</th>
+                        <th scope="col">Comp. Aérea</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Capacidade</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Remover</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+<script src="index.js"></script>
+
+</html>
